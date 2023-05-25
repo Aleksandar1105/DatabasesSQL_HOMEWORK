@@ -40,6 +40,6 @@ GO
 
 --List all Teachers without exam Grade
 SELECT t.*
-FROM Teacher t
-LEFT JOIN Grade g ON t.Id = g.TeacherID
-WHERE g.Id IS NULL
+FROM Teacher AS t
+LEFT JOIN Grade AS g ON t.Id = g.TeacherID
+WHERE g.TeacherID IS NULL
